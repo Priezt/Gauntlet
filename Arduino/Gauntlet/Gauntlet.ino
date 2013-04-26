@@ -27,7 +27,7 @@ unsigned long keyLastPressesTime[64];
 
 void setup(){
   int i;
-  Serial.begin(9600);
+  Serial1.begin(9600);
   for(i = 0; i < MODE_COUNT; i = i + 1){
     //Serial.println(("set pin to OUTPUT: " + String(modeLEDs[i])));
     pinMode(modeLEDs[i], OUTPUT);
@@ -49,6 +49,41 @@ void loop(){
     }
     switchMode(newMode);
     return;
+  }
+  if(currentMode == RED_MODE){
+    if(checkKeyPressed(KEY_W)){
+      Serial1.println("key w");
+    }
+    if(checkKeyPressed(KEY_E)){
+      Serial1.println("key e");
+    }
+    if(checkKeyPressed(KEY_R)){
+      Serial1.println("key r");
+    }
+    if(checkKeyPressed(KEY_A)){
+      Serial1.println("key a");
+    }
+    if(checkKeyPressed(KEY_S)){
+      Serial1.println("key s");
+    }
+    if(checkKeyPressed(KEY_D)){
+      Serial1.println("key d");
+    }
+    if(checkKeyPressed(KEY_F)){
+      Serial1.println("key f");
+    }
+    if(checkKeyPressed(KEY_Z)){
+      Serial1.println("key z");
+    }
+    if(checkKeyPressed(KEY_X)){
+      Serial1.println("key x");
+    }
+    if(checkKeyPressed(KEY_C)){
+      Serial1.println("key c");
+    }
+    if(checkKeyPressed(KEY_V)){
+      Serial1.println("key v");
+    }
   }
 }
 
